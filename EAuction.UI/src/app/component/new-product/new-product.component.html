@@ -1,0 +1,76 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="container">
+        <!-- Content here -->
+
+        <h4 class="mat-display-1">Add Product</h4>
+
+        <div class="row">
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter Product Name</mat-label>
+                    <input matInput #input placeholder="Enter Product Name" [formControl]="f.productName" required>
+                    <mat-error *ngIf="f.productName.invalid && f.productName.errors?.['required']">Product Name is
+                        required.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter Short Deceription</mat-label>
+                    <input matInput #input placeholder="Enter Short Deceription" [formControl]="f.shortDeceription"
+                        required>
+                    <mat-error *ngIf="f.shortDeceription.invalid && f.shortDeceription.errors?.['required']">Short
+                        Deceription is required.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter Detailed Deceription</mat-label>
+                    <textarea matInput placeholder="Enter Detailed Deceription" [formControl]="f.detailedDeceription"
+                        required></textarea>
+                    <mat-error *ngIf="f.detailedDeceription.invalid && f.detailedDeceription.errors?.['required']">
+                        Detailed Deceription is required.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Select Category</mat-label>
+                    <mat-select [formControl]="f.category" required>
+                        <mat-option value="1">Painting</mat-option>
+                        <mat-option value="2">Sculptor</mat-option>
+                        <mat-option value="3">Ornament</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="f.category.invalid && f.category.errors?.['required']">Category is required.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter Bid End Date</mat-label>
+                    <input matInput [matDatepicker]="picker" placeholder="Enter Bid End Date"
+                        [formControl]="f.bidEndDate" required>
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-error *ngIf="f.bidEndDate.invalid && f.bidEndDate.errors?.['required']">Bid End Date is
+                        required.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill" floatLabel="always">
+                    <mat-label>Enter Starting Price</mat-label>
+                    <input matInput type="number" class="example-right-align" placeholder="0"
+                        [formControl]="f.startingPrice" required>
+                    <span matPrefix>$&nbsp;</span>
+                    <mat-error *ngIf="f.startingPrice.invalid && f.startingPrice.errors?.['required']">Starting Price is
+                        required.</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"><button class="btn btn-primary" [disabled]="form.invalid" type="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>

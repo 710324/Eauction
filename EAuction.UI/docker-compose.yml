@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+   eauction-angaulr-app:
+      container_name: eauctionangularapp
+      build:
+         context: .
+         dockerfile: .\Dockerfile
+      depends_on:
+         - eauction.buyer
+         - eauction.seller
+      ports:
+         - "4200:80"

@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Delete Product</h1>
+<div mat-dialog-content>
+    Would you like to delete?
+</div>
+<div mat-dialog-actions>
+    <div class="col col-1">
+        <button mat-button mat-dialog-close class="btn btn-secondary" (click)="closeDialog(false)">No</button>
+    </div>
+    <div class="col">
+        <button mat-button mat-dialog-close class="btn btn-danger" (click)="closeDialog(true)">Delete</button>
+    </div>
+</div>

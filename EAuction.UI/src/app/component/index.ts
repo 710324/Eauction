@@ -1,0 +1,10 @@
+export { ViewProductComponent } from './view-product/view-product.component';
+export { ProductDeleteDialogComponent } from './product-delete-dialog/product-delete-dialog.component';
+export { NewProductComponent } from './new-product/new-product.component';
+export { NewSellerComponent } from './new-seller/new-seller.component';
+export { NewBuyerComponent } from './new-buyer/new-buyer.component';
+export { PlaceBidsComponent } from './place-bids/place-bids.component';
+export { ProductListComponent } from './product-list/product-list.component';
+export { UserListComponent } from './view-user/user-list.component';
+export { ViewProductBidsComponent } from './view-product-bids/view-product-bids.component';
+export { EditPlaceBidComponent } from './edit-place-bid/edit-place-bid.component';

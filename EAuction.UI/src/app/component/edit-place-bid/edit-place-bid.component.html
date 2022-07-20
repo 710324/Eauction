@@ -1,0 +1,28 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="container">
+        <h4 class="mat-display-1">Edit Product Bids</h4>
+        <div class="row">
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput placeholder="pat@example.com" [formControl]="f.email" required>
+                    <mat-error *ngIf="f.email.invalid && f.email.errors?.['required']">Email is required.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill" floatLabel="always">
+                    <mat-label>Bid Amount</mat-label>
+                    <input matInput type="number" class="example-right-align" placeholder="0"
+                        [formControl]="f.bidAmount" required>
+                    <span matPrefix>$&nbsp;</span>
+                    <mat-error *ngIf="f.bidAmount.invalid && f.bidAmount.errors?.['required']">Bid is required.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"><button class="btn btn-primary" [disabled]="form.invalid" type="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>

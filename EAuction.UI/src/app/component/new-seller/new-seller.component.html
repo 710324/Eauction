@@ -1,0 +1,96 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="container">
+        <!-- Content here -->
+
+        <h4 class="mat-display-1">New Seller</h4>
+
+        <div class="row">
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter First Name</mat-label>
+                    <input matInput #input placeholder="Enter First Name" [formControl]="f.firstName" required>
+                    <mat-error *ngIf="f.firstName.invalid && f.firstName.errors?.['required']">First Name is required.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter Last Name</mat-label>
+                    <input matInput #input placeholder="Enter Last Name" [formControl]="f.lastName" required>
+                    <mat-error *ngIf="f.lastName.invalid && f.lastName.errors?.['required']">Last Name is required.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput placeholder="pat@example.com" [formControl]="f.email" required>
+                    <mat-error *ngIf="f.email.invalid && f.email.errors?.['required']">Email is required.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter Address</mat-label>
+                    <textarea matInput #input placeholder="Enter Address" [formControl]="f.address" required></textarea>
+                    <mat-error *ngIf="f.address.invalid && f.address.errors?.['required']">Address is required.</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter City</mat-label>
+                    <input matInput #input placeholder="Enter City" [formControl]="f.city" required>
+                    <mat-error *ngIf="f.city.invalid && f.city.errors?.['required']">City is required.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter State</mat-label>
+                    <input matInput #input placeholder="Enter State" [formControl]="f.state" required>
+                    <mat-error *ngIf="f.state.invalid && f.state.errors?.['required']">State is required.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter Pin</mat-label>
+                    <input matInput #input placeholder="Enter Pin" [formControl]="f.pin" required>
+                    <mat-error *ngIf="f.pin.invalid && f.pin.errors?.['required']">Pin is required.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter Phone Number</mat-label>
+                    <input matInput #input placeholder="Enter Phone Number" [formControl]="f.phone" required>
+                    <mat-error *ngIf="f.phone.invalid && f.phone.errors?.['required']">Phone Number is required.</mat-error>
+                    <mat-error *ngIf="f.phone.invalid && (f.phone.errors?.['minlength'] || f.phone.errors?.['maxlength'])">Phone Number must be 10 digit.</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter User name</mat-label>
+                    <input matInput #input placeholder="Enter User name" [formControl]="f.userName" required>
+                    <mat-error *ngIf="f.userName.invalid && f.userName.errors?.['required']">User name is required.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter Password</mat-label>
+                    <input matInput #input placeholder="Enter Password" [formControl]="f.password" required type="password">
+                    <mat-error *ngIf="f.password.invalid && f.password.errors?.['required']">Password is required.</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <!-- <mat-form-field hintLabel="Max 10 characters" appearance="fill">
+    <mat-label>Enter some input</mat-label>
+    <input matInput #input maxlength="10" placeholder="Ex. Nougat">
+    <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+</mat-form-field> -->
+        <div class="row">
+            <div class="col"><button class="btn btn-primary" [disabled]="form.invalid" type="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>

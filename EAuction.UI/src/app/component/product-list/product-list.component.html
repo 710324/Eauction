@@ -1,0 +1,69 @@
+<div class="container">
+  <h4 class="mat-display-1">Product List</h4>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/add-product">Add Product</a>
+  </nav>
+
+  <table mat-table [dataSource]="productList" class="mat-elevation-z8">
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- ProductName Column -->
+    <ng-container matColumnDef="productName">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.productName}} </td>
+    </ng-container>
+
+    <!-- ShortDeceription Column -->
+    <ng-container matColumnDef="shortDeceription">
+      <th mat-header-cell *matHeaderCellDef> Short Deceription </th>
+      <td mat-cell *matCellDef="let element"> {{element.shortDeceription}} </td>
+    </ng-container>
+
+    <!-- DetailedDeceription Column -->
+    <ng-container matColumnDef="detailedDeceription">
+      <th mat-header-cell *matHeaderCellDef> Detailed Deceription </th>
+      <td mat-cell *matCellDef="let element"> {{element.detailedDeceription}} </td>
+    </ng-container>
+
+    <!-- Category Column -->
+    <ng-container matColumnDef="category">
+      <th mat-header-cell *matHeaderCellDef> Category </th>
+      <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+    </ng-container>
+
+    <!-- BidEndDate Column -->
+    <ng-container matColumnDef="bidEndDate">
+      <th mat-header-cell *matHeaderCellDef> Bid EndDate </th>
+      <td mat-cell *matCellDef="let element"> {{element.bidEndDate}} </td>
+    </ng-container>
+
+    <!-- StartingPrice Column -->
+    <ng-container matColumnDef="startingPrice">
+      <th mat-header-cell *matHeaderCellDef> Starting Price </th>
+      <td mat-cell *matCellDef="let element"> {{element.startingPrice}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="view">
+      <th mat-header-cell *matHeaderCellDef> View </th>
+      <td mat-cell *matCellDef="let element">
+        <a [routerLink]="['/view-product',element.productId]" mat-icon-button>
+          <mat-icon>pageview</mat-icon>
+        </a>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> Delete </th>
+      <td mat-cell *matCellDef="let element">
+        <a class="delete_item" (click)="openDialog('1000ms', '500ms',element.productId)">
+          <mat-icon>delete_forever</mat-icon>
+        </a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

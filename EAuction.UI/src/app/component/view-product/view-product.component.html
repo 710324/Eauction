@@ -1,0 +1,46 @@
+<div class="container">
+    <h4 class="mat-display-1">View Product</h4>
+    <div *ngIf="product != undefined">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" routerLink="/product-list">Back</a>
+            <a class="navbar-brand" [routerLink]="['/place-bid',productId]">Place Product Bid</a>
+        </nav>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Product Name</label>
+                <input type="email" class="form-control" id="inputEmail4" [value]="product.productName"
+                    placeholder="Email" readonly>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Short Deceription</label>
+                <input type="email" class="form-control" id="inputEmail4" [value]="product.shortDeceription"
+                    placeholder="Email" readonly>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Detailed Deceription</label>
+                <input type="email" class="form-control" id="inputEmail4" [value]="product.detailedDeceription"
+                    placeholder="Email" readonly>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Category</label>
+                <input type="email" class="form-control" id="inputEmail4" [value]="product.category"
+                    placeholder="Email" readonly>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Bid EndDate</label>
+                <input type="email" class="form-control" id="inputEmail4" [value]="product.bidEndDate"
+                    placeholder="Email" readonly>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Starting Price</label>
+                <input type="email" class="form-control" id="inputEmail4" [value]="product.startingPrice"
+                    placeholder="Email" readonly>
+            </div>
+        </div>
+    </div>
+</div>
