@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:  
+  #eauction.ui:
+  #  image: ${DOCKER_REGISTRY-}eauctionui
+  #  build:
+  #    context: .
+  #    dockerfile: EAuction.UI/Dockerfile      
+
+  eauction.seller:
+    image: ${DOCKER_REGISTRY-}eauctionseller
+    build:
+      context: .
+      dockerfile: EAuction.Seller/Dockerfile
+
+  eauction.buyer:
+    image: ${DOCKER_REGISTRY-}eauctionbuyer
+    build:
+      context: .
+      dockerfile: EAuction.Buyer/Dockerfile
+
+  eauction.mongo:
+    image: mongo 
+
+  eauction.rabbitmq:
+    image: rabbitmq:3-management

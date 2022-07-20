@@ -1,0 +1,65 @@
+version: '3.4'
+services:
+  #eauction.ui:
+  #  container_name: eauctionui 
+  #  depends_on: 
+  #    - eauction.seller
+  #    - eauction.buyer
+  #  ports:
+  #    - "4200:80"
+  #  environment:
+  #    NODE_EVN: production
+
+  eauction.seller:
+    container_name: eauctionseller
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "MongoDB:ConnectionURI=mongodb://eauctiondb:27017"
+      - "RabbitMQInformation:UserName=guest"
+      - "RabbitMQInformation:Password=guest"
+      - "RabbitMQInformation:HostName=eauctionrabbitmq"
+    depends_on: 
+      - eauction.mongo
+      - eauction.rabbitmq
+    ports:
+      - "41067:80"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+  eauction.buyer:
+    container_name: eauctionbuyer
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "MongoDB:ConnectionURI=mongodb://eauctiondb:27017"
+      - "RabbitMQInformation:UserName=guest"
+      - "RabbitMQInformation:Password=guest"
+      - "RabbitMQInformation:HostName=eauctionrabbitmq"      
+    depends_on: 
+      - eauction.mongo
+      - eauction.rabbitmq
+    ports:
+      - "41068:80"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+  eauction.mongo:
+    container_name: eauctiondb
+    restart: always
+    ports:
+      - "27017:27017"
+
+  eauction.rabbitmq:
+    container_name: eauctionrabbitmq
+    restart: unless-stopped
+    ports:
+      - "4369:4369"
+      - "5671:5671"
+      - "5672:5672"
+      - "25672:25672"
+      - "15671:15671"
+      - "15672:15672"
+    # healthcheck:
+    #   test: ["CMD", "curl", "-f", "http://localhost:15672"]
+    #   interval: 30s
+    #   timeout: 10s
+    #   retries: 3

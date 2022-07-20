@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eauctionseller-deployment
+  labels:
+    app: eauctionseller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eauctionseller
+  template:
+    metadata:
+      labels:
+        app: eauctionseller
+    spec:
+      containers:
+        - name: eauctionseller
+          image: raja444pln/eauctionseller:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Development
+            - name: MongoDB__ConnectionURI
+              value: mongo-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: eauctionseller-service
+spec:
+  type: NodePort
+  selector:
+    app: eauctionseller
+  ports:
+    - protocol: TCP
+      port: 41067
+      targetPort: 80 
+      nodePort: 31000
+  

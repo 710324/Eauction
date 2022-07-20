@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EAuction.Data", "EAuction.Data\EAuction.Data.csproj", "{34F600AC-8BA7-45D7-8D7F-478C5A32416C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EAuction.Models", "EAuction.Modal\EAuction.Models.csproj", "{D146D1D6-50FE-4203-910E-4F6107FD24B3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EAuction.Processor", "EAuction.Processor\EAuction.Processor.csproj", "{0CBFEC20-297B-4C30-BEE8-79459C9954C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EAuction.Tests", "EAuctionTests\EAuction.Tests.csproj", "{C0A698AA-47A8-42D3-AE92-D9E262E67FC7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EAuction.Buyer", "EAuction.Buyer\EAuction.Buyer.csproj", "{4D074A52-5146-4A0F-B26B-48F1DD27B486}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EAuction.Seller", "EAuction.Seller\EAuction.Seller.csproj", "{746080CB-9983-45BA-B3C7-09C06C8229C2}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-e-auction-app", "docker-e-auction-app.dcproj", "{D7D51413-45A2-4BCA-AE83-6D66F648F7A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34F600AC-8BA7-45D7-8D7F-478C5A32416C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34F600AC-8BA7-45D7-8D7F-478C5A32416C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34F600AC-8BA7-45D7-8D7F-478C5A32416C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34F600AC-8BA7-45D7-8D7F-478C5A32416C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D146D1D6-50FE-4203-910E-4F6107FD24B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D146D1D6-50FE-4203-910E-4F6107FD24B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D146D1D6-50FE-4203-910E-4F6107FD24B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D146D1D6-50FE-4203-910E-4F6107FD24B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CBFEC20-297B-4C30-BEE8-79459C9954C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CBFEC20-297B-4C30-BEE8-79459C9954C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CBFEC20-297B-4C30-BEE8-79459C9954C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CBFEC20-297B-4C30-BEE8-79459C9954C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0A698AA-47A8-42D3-AE92-D9E262E67FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0A698AA-47A8-42D3-AE92-D9E262E67FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0A698AA-47A8-42D3-AE92-D9E262E67FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0A698AA-47A8-42D3-AE92-D9E262E67FC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D074A52-5146-4A0F-B26B-48F1DD27B486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D074A52-5146-4A0F-B26B-48F1DD27B486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D074A52-5146-4A0F-B26B-48F1DD27B486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D074A52-5146-4A0F-B26B-48F1DD27B486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{746080CB-9983-45BA-B3C7-09C06C8229C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{746080CB-9983-45BA-B3C7-09C06C8229C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{746080CB-9983-45BA-B3C7-09C06C8229C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{746080CB-9983-45BA-B3C7-09C06C8229C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7D51413-45A2-4BCA-AE83-6D66F648F7A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D51413-45A2-4BCA-AE83-6D66F648F7A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D51413-45A2-4BCA-AE83-6D66F648F7A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D51413-45A2-4BCA-AE83-6D66F648F7A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E231E23-B600-410A-AF8B-D190A306BF1D}
+	EndGlobalSection
+EndGlobal
