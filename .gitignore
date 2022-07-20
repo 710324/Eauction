@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/EAuction.Buyer/obj/Debug/netcoreapp3.1
+/EAuction.Buyer/obj/Release/netcoreapp3.1
+/EAuction.Data/obj
+/EAuction.Modal/obj/Debug/netcoreapp3.1
+/EAuction.Modal/obj/Release/netcoreapp3.1
+/EAuction.Processor/obj
+/EAuction.Seller/obj/Debug/netcoreapp3.1
+/EAuction.Seller/obj/Release/netcoreapp3.1
+/EAuctionTests/obj
