@@ -101,10 +101,10 @@ namespace EAuctionTests.Processors
         {
             var buyerBid = new BuyerBid();
 
-            mockProductService.Setup(x => x.UpdateBidForProduct(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<decimal>()))
+            mockProductService.Setup(x => x.UpdateBidForProduct(It.IsAny<BuyerBid>()))
                 .ThrowsAsync(new ProductException(Constants.ProductNotFound));
 
-            var result = await processor.UpdateBid("test001", "buyer@gmail.com", Convert.ToDecimal(0.00));
+            var result = await processor.UpdateBid(buyerBid);
             result.Data.ShouldBeNull();
             result.Errors.ShouldNotBeNull();
             Assert.Contains(Constants.ProductNotFound, result.Errors.ToList());
@@ -116,7 +116,7 @@ namespace EAuctionTests.Processors
             BuyerProcessor processor)
         {
             var buyerBid = new BuyerBid();
-            var result = await processor.UpdateBid("test001", "buyer@gmail.com", Convert.ToDecimal(0.00));
+            var result = await processor.UpdateBid(buyerBid);
             result.Data.ShouldNotBeNull();
         }
     }
