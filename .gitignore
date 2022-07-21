@@ -11,3 +11,17 @@
 /EAuction.Seller/obj/Debug/netcoreapp3.1
 /EAuction.Seller/obj/Release/netcoreapp3.1
 /EAuctionTests/obj
+/EAuction.UI/node_modules/
+/EAuction.UI/angular/
+/bin/Debug
+/EAuction.Buyer/bin/Debug/netcoreapp3.1
+/EAuction.Buyer/obj
+/EAuction.Data/bin/Debug/netcoreapp3.1
+/EAuction.Modal/bin/Debug/netcoreapp3.1
+/EAuction.Modal/obj
+/EAuction.Processor/bin/Debug/netcoreapp3.1
+/EAuction.Seller/bin/Debug/netcoreapp3.1
+/EAuction.Seller/obj
+/EAuction.UI/.angular/cache/14.0.4
+/obj
+/EAuctionTests/bin/Debug/netcoreapp3.1

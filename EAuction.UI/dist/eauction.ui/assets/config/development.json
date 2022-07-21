@@ -1,0 +1,6 @@
+{
+    "API_ENDPOINTS": {
+        "sellerBaseUrl": "/e-auction-seller/api/v1/Seller/",
+        "buyerBaseUrl": "/e-auction-buyer/api/v1/Buyer/" 
+    }
+}
