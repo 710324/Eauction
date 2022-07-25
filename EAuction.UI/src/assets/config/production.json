@@ -1,6 +1,6 @@
 {
     "API_ENDPOINTS": {
-        "sellerBaseUrl": "https://eauctionsellerapp.azurewebsites.net/e-auction-seller/api/v1/Seller/",
-        "buyerBaseUrl": "https://eauctionbuyerapp.azurewebsites.net/e-auction-buyer/api/v1/Buyer/" 
+        "sellerBaseUrl": "https://eauctionseller.azurewebsites.net/e-auction-seller/api/v1/Seller/",
+        "buyerBaseUrl": "https://eauctionbuyer.azurewebsites.net/e-auction-buyer/api/v1/Buyer/" 
     }
 }

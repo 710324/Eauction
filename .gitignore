@@ -25,3 +25,9 @@
 /EAuction.UI/.angular/cache/14.0.4
 /obj
 /EAuctionTests/bin/Debug/netcoreapp3.1
+/EAuction.Buyer/bin/Release/netcoreapp3.1
+/EAuction.Data/bin/Release/netcoreapp3.1
+/EAuction.Modal/bin/Release/netcoreapp3.1
+/EAuction.Processor/bin/Release/netcoreapp3.1
+/EAuction.Seller/bin/Release/netcoreapp3.1
+/EAuctionTests/bin/Release/netcoreapp3.1
